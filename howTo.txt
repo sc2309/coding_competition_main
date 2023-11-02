@@ -1,0 +1,19 @@
+1. creating a web server using flask
+2. creating a url ( /home ) for home page
+3. creating a home.html file
+4. creating a footer with options
+5. writing and editing content given in untitled.png
+	1. benefits
+	2. problems?
+	3. some content
+6. developing a html sports file and integrating it with python
+7. writing about sports content
+8. developing a html diet file and integrating it with python
+9. writing about diet content
+10. developing a html exercises file and integrating it with python
+11. writing about exercises content
+12. developing a html routine file and integrating it with python
+13. writing about routine content
+14. same to be done with about us and contact us, LOGIN and SIGN UP
+15. work on sign up take input in html store data in excel sheet
+16. take data stored in excel and compare with input provided in login
