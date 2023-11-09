@@ -12,18 +12,17 @@
         <header>
             <a href="#home" class="logo"><i class="fa-solid fa-dumbbell"></i> JackedRoar</a>
             <div id="menu-bar" class="fas fa-bars"></div>
-    
             <nav class="navbar">
-                <a href="/home"><b>Home</b></a>
-                <a href="#"><b>Sports</b></a>
-                <a href="#"><b>Daily Diet</b></a>
-                <a href="#"><b>Exercise</b></a>
+                <a href="/index"><b>Home</b></a>
+                <a href="/sports"><b>Sports</b></a>
+                <a href="/diet"><b>Daily Diet</b></a>
+                <a href="/fitness"><b>Exercise</b></a>
                 <a href="#"><b>Routine</b></a>
                 <a href="#"><b>About</b></a>
                 <a href="#"><b>Contact</b></a>
                 
-                <a href="#" class="btn">Signup</a> 
-                <a href="#" class="btn">Login</a> 
+                <a href="/signup" class="btn">Signup</a> 
+                <a href="/login" class="btn">Login</a> 
                 <!-- <div class="search">
                     <form action="#Recommended">
                         
@@ -40,28 +39,35 @@
             </nav>
             
         </header>
+            
         <section class="order" id="order">
         <!-- <h1 class="heading">Benefits of <span> Health Care</span> through Sports & Fitness</h1> -->
             
-            <h1 class="heading"> <span>Order</span> Your Food Now</h1>
+            <!-- <h1 class="heading"> <span>Order</span> Your Food Now</h1> -->
         
             <div class="row">
         
                 <div class="image">
-                <h2 class="heading">Enter your details to get a <span> perfect daily diet </span> plan</h2>
+                 <h2 class="heading"><span> Login</span> Page</h2>
                 </div>
         
-                <form action="/diet" method="POST">
-                    <p>Are you vegetarian or non-vegetarian or do you eat protein powder? Please consider saying the answer in yes or no</p>
-                    <label for="html"> I am vegetarian: </label>
-                    <input type="text" id="html" name="is_veg"><br>
-                    <label for="css">I am non-vegetarian: </label>
-                    <input type="text" id="css" name="is_non_veg"><br>
-                    <label for="javascript">I eat protein powder: </label>
-                    <input type="text" id="javascript" name="protein_powder_yes">
-                    <br>  
-                    <input type="submit" value="Submit" class="btn">
-                    <p>{{ next_item }}</p>
+                <form action="">
+
+                    <div class="inputBox inputBox1">
+                        <input type="email" placeholder=" Enter Your E-mail Address">
+                        <input type="password" placeholder="Enter Your Password">
+                    </div>
+        
+                    <div class="inputBox">
+                        <!-- <input type="number" placeholder="Number"> -->
+                        <!-- <input type="text" placeholder="Food Name"> -->
+                    </div>
+        
+                    <!-- <textarea placeholder="Address" name="" id="" cols="30" rows="10"></textarea> -->
+        
+                    <input type="submit" value="Submit" class="btn" style="margin-left: 580px;">
+                    <p style="margin-left: 550px; margin-top: 10px;">Not ragisterd yet? <a href="./signup.html">Signup</a></p>
+        
                 </form>
         
             </div>

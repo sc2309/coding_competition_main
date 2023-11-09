@@ -1,14 +1,16 @@
 from flask import Blueprint, render_template, request
 
 diet = Blueprint('diet', __name__)
+func = Blueprint('func',__name__)
 
+@func.route('/func')
 def new_diet(diet):
     global current_index
     item = diet[current_index]
     current_index = (current_index + 1) % len(diet)
     return item
 
-@diet.route('/diet', methods=['POST'])
+@diet.route('/diet')
 def return_diet():
     is_veg = str(request.form.get('is_veg')).lower()
     is_non_veg = str(request.form.get('is_non_veg')).lower()
@@ -19,6 +21,8 @@ def return_diet():
     non_veg_diet_powder = ['1. Breakfast: Protein smoothie with whey protein, spinach, banana, and almond milk.\n2. Lunch: Grilled chicken breast salad with mixed greens.\n3. Snack: Greek yogurt with honey and walnuts.\n4. Dinner: Baked salmon and steamed broccoli.','1. Breakfast: Protein pancakes made with whey protein and topped with fresh berries.\n2. Lunch: Lean ground beef and black bean chili.\n3. Snack: Cottage cheese with pineapple.\n4. Dinner: Grilled shrimp skewers with a side of salted spinach and brown rice.','1. Breakfast: Protein smoothie with turkey breast, spinach, avocado, and almond milk.\n2. Lunch: Turkey and lentil soup.\n3. Snack: Hard-boiled eggs.\n4. Dinner: Grilled turkey cutlets with a chickpea and vegetable stir-fry.','1. Breakfast: Protein oatmeal with whey protein, and mixed berries.\n2. Lunch: tofu or panner salad sandwich with mixed greens on whole grain bread.\n3. Snack: Greek yogurt with sliced almonds.\n4. Dinner: Baked cod and roasted sprouts.','1. Breakfast: Protein waffles made with whey protein and topped with sliced berries.\n2. Lunch: Pulled chicken sandwich.\n3. Snack: Cottage cheese with sliced strawberries.\n4. Dinner: Grilled chicken and sweet potato.','1. Breakfast: Protein smoothie with whey protein, mango, and coconut water.\n2. Lunch: Grilled fish and vegetable salad.\n3. Snack: Greek yogurt with honey and nachos.\n4. Dinner: roasted sprout with a side of brown rice and steamed broccoli.','1. Breakfast: Omelette with diced ham, spinach, and cheese.\n2. Lunch: Chicken and vegetable stir-fry with brown rice.\n3. Snack: Cottage cheese with blueberries.\n4. Dinner: Beef stir-fry with broccoli, bell peppers']
     non_veg_diet_nopowder = ['1. Breakfast: Greek yogurt with mixed berries and a drizzle of honey.\n2. Lunch: Grilled chicken breast salad with mixed greens.\n3. Snack: Greek yogurt with honey and walnuts.\n4. Dinner: Baked salmon and steamed broccoli.','1. Breakfast: Scrambled eggs with spinach, tomatoes, and a sprinkle of cheese.\n2. Lunch: Lean ground beef and black bean chili.\n3. Snack: Cottage cheese with pineapple.\n4. Dinner: Grilled shrimp skewers with a side of salted spinach and brown rice.','1. Breakfast: Turkey sausage and vegetable omelette.\n2. Lunch: Turkey and lentil soup.\n3. Snack: Hard-boiled eggs.\n4. Dinner: Grilled turkey cutlets with a chickpea and vegetable stir-fry.','1. Breakfast: Smoked salmon on whole-grain toast with avocado.\n2. Lunch: tofu or panner salad sandwich with mixed greens on whole grain bread.\n3. Snack: Greek yogurt with sliced almonds.\n4. Dinner: Baked cod and roasted sprouts.','1. Breakfast: Scrambled eggs with diced ham.\n2. Lunch: Pulled chicken sandwich.\n3. Snack: Cottage cheese with sliced strawberries.\n4. Dinner: Grilled chicken and sweet potato.','1. Breakfast: Shrimp and vegetable stir-fry with brown rice.\n2. Lunch: Grilled fish and vegetable salad.\n3. Snack: Greek yogurt with honey and nachos.\n4. Dinner: roasted sprout with a side of brown rice and steamed broccoli.','1. Breakfast: Omelette with diced ham, spinach, and cheese.\n2. Lunch: Chicken and vegetable stir-fry with brown rice.\n3. Snack: Cottage cheese with blueberries.\n4. Dinner: Beef stir-fry with broccoli, bell peppers']
     
+    next_item="You need to sign up first!"
+
     if is_veg == 'yes' and is_non_veg == 'no' and eat_protein_powder == 'yes':
         next_item = new_diet(veg_diet_powder)
     elif is_veg == 'yes' and is_non_veg == 'no' and eat_protein_powder == 'no':
@@ -27,4 +31,4 @@ def return_diet():
         next_item = new_diet(non_veg_diet_powder)
     elif is_veg == 'no' and is_non_veg == 'yes' and eat_protein_powder == 'no':
         next_item = new_diet(non_veg_diet_nopowder)
-    return render_template('daily_diet.html', next_item=next_item)
+    return render_template('diet.html', diet_item=next_item)
