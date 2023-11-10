@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Diet</title>
+        <title>Diet | JackedRoar</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/static/style.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
         <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
     </head>
     <body>
@@ -13,16 +13,13 @@
     <a href="#home" class="logo"><i class="fa-solid fa-dumbbell"></i> JackedRoar</a>
     <div id="menu-bar" class="fas fa-bars"></div>
     <nav class="navbar">
-        <a href="/index"><b>Home</b></a>
+        <a href="/home"><b>Home</b></a>
         <a href="/sports"><b>Sports</b></a>
         <a href="/diet"><b>Daily Diet</b></a>
         <a href="/fitness"><b>Exercise</b></a>
         <a href="#"><b>Routine</b></a>
         <a href="#"><b>About</b></a>
         <a href="#"><b>Contact</b></a>
-        
-        <a href="/signup" class="btn">Signup</a> 
-        <a href="/login" class="btn">Login</a> 
         <!-- <div class="search">
             <form action="#Recommended">
                 
@@ -43,7 +40,7 @@
         <!-- <h1 class="heading">Benefits of <span> Health Care</span> through Sports & Fitness</h1> -->
             
             <h1 class="heading"> <span>Order</span> Your Food Now</h1>
-        
+            <h1>REFRESH THE PAGE TO CHANGE THE DIET</h1>
             <div class="row">
         
                 <div class="image">
@@ -51,7 +48,12 @@
                 </div>
         
             </div>
-        
+            <h3>The diet here contains veg and non veg with and without protein powder.</h3>
+            A balanced diet is essential for maintaining good health and well-being. It involves consuming a variety of foods that provide the necessary nutrients our bodies need to function optimally. Our website is capable of providing<br>you with a good diet plan if you dont like the diet or it dosen't suits you just refresh the page to get an another diet. A well-balanced diet typically includes a mix of fruits, vegetables, whole grains, lean proteins, and healthy fats.<br>
+            Fruits and vegetables are rich in vitamins, minerals, and antioxidants that support our immune system and overall health. Whole grains, such as brown rice and quinoa, provide a good source of complex carbohydrates for<br>sustained energy. Lean proteins, found in sources like poultry, fish, and legumes, are crucial for muscle repair and growth.<br>
+            Incorporating healthy fats, such as those found in avocados, nuts, and olive oil, is important for brain function and the absorption of fat-soluble vitamins. Hydration is also a key component of a balanced diet, and water<br>should be the primary beverage choice.<br>
+            It's important to be mindful of portion sizes and to limit the intake of processed foods, sugary snacks, and excessive amounts of unhealthy fats. Adopting a balanced diet not only helps maintain a healthy weight but also<br>reduces the risk of chronic diseases such as heart disease, diabetes, and certain cancers.<br>
+            You can customize your diet accordingly or can follow diet provided by us.<br>
         </section>
         
     </body>
