@@ -6,14 +6,6 @@
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="styles.css">
     <title>Feedback | JackedRoar</title>
-    <style>
-        #feed{
-            padding: 10px;
-            background-color: gainsboro;
-            width: 175px;
-            height: 150px;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -33,10 +25,11 @@
             <!-- <a href="./login.html" class="btn">Login</a>  -->
         </nav>
     </header>
-    <form action="/store_data" method="post">
-        <label style="font-size: 19px;" for="name">Give your feedback here:</label>
-        <input type="text" id="feed" name="feedback" required>
-        <button type="submit" class="btn">Submit</button>
+    <h1 class="heading" style="margin-top: 80px;">Provide your <span> feedback</span> here</h1>
+    <form action="/store_data" method="post" style="margin-left: 400px; margin-top: 80px;">
+        <input type="text" id="feed" name="feedback" required >
     </form>
+    <button type="submit" class="btn" style="margin-top: 10px; margin-left: 680px;">Submit</button>
+
     </body>
     </html>
