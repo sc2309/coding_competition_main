@@ -11,6 +11,7 @@ from routines import routines
 from signup2 import signup2
 from feedback import feedback
 from store_data import store_data
+from login2 import login2
 
 def create_app():
     app = Flask(__name__)
@@ -26,6 +27,7 @@ def create_app():
     app.register_blueprint(signup2, url_prefix='/')
     app.register_blueprint(store_data, url_prefix='/')
     app.register_blueprint(feedback, url_prefix='/')
+    app.register_blueprint(login2, url_prefix='/')
     return app
 
 if __name__ == "__main__":
