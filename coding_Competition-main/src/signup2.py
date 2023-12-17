@@ -1,43 +1,64 @@
-from flask import Blueprint, render_template, request, flash
-import openpyxl
+from flask import Blueprint, render_template, request
+import sqlite3
+import hashlib
 
 signup2 = Blueprint('signup2', __name__)
 
-def add_values_to_excel(file_path, sheet_name, values):
-    try:
-        try:
-            workbook = openpyxl.load_workbook(file_path)
-        except FileNotFoundError:
-            workbook = openpyxl.Workbook()
-
-        if sheet_name not in workbook.sheetnames:
-            workbook.create_sheet(sheet_name)
-
-        sheet = workbook[sheet_name]
-
-        for row in values:
-            sheet.append(row)
-
-        workbook.save(file_path)
-
-    except Exception as e:
-        print(f"An error occurred: {e}")
-
 @signup2.route('/signup2', methods=['GET', 'POST'])
 def index():
-    firstname = str(request.form.get('first_name'))
-    lastname = str(request.form.get('last_name'))
-    number = str(request.form.get('number'))
-    email = str(request.form.get('email'))
+    firstname = request.form.get('first_name')
+    lastname = request.form.get('last_name')
+    number = request.form.get('number')
+    email = request.form.get('email')
     password = str(request.form.get('password'))
-    is_veg = str(request.form.get('is_veg')).lower()
-    is_non_veg = str(request.form.get('is_non_veg')).lower()
-    protein_powder_yes = str(request.form.get('protein_powder_yes')).lower()
-    excel_file_path = "data.xlsx"
-    sheet_name = "DataSheet"
-    new_values = [
-        [firstname,lastname,number,email,password,is_veg,is_non_veg,protein_powder_yes]
-    ]
-    add_values_to_excel(excel_file_path, sheet_name, new_values)
+    re_password = str(request.form.get('confirm_password'))
+    hashed_password = hashlib.sha256(password.encode()).hexdigest()
+    
+    conn = sqlite3.connect('signUp.db')
+    cursor = conn.cursor()
 
+    # Define the table schema if it doesn't exist, including the hashed_password column
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS signUp_table (
+            id INTEGER PRIMARY KEY,
+            firstname TEXT,
+            lastname TEXT,
+            number TEXT,
+            email TEXT
+        )
+    ''')
+
+    # Commit changes to the database
+    conn.commit()
+
+    # Check the table schema
+    cursor.execute("PRAGMA table_info('signUp_table')")
+    table_info = cursor.fetchall()
+    print(table_info)  # Print the table schema info
+
+    # Check if 'hashed_password' column exists in the table schema
+    column_exists = any(column[1] == 'hashed_password' for column in table_info)
+
+    # If 'hashed_password' column not present, alter the table to add it
+    if not column_exists:
+        cursor.execute('ALTER TABLE signUp_table ADD COLUMN hashed_password TEXT')
+        conn.commit()
+        print("Column 'hashed_password' added to the table")
+
+    # Insert data into the table
+    cursor.execute('''
+        INSERT INTO signUp_table (firstname, lastname, number, email, hashed_password) 
+        VALUES (?, ?, ?, ?, ?)
+    ''', (firstname, lastname, number, email, hashed_password))
+    conn.commit()
+    
+    # Fetch and display data
+    cursor.execute('SELECT * FROM signUp_table')
+    rows = cursor.fetchall()
+    for row in rows:
+        print(row)
+    
+    cursor.close()
+    conn.close()
+    
     return render_template('signup2.html')
