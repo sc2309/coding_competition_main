@@ -1,6 +1,5 @@
 from flask import Blueprint, render_template, request
 import sqlite3
-import hashlib
 
 signup2 = Blueprint('signup2', __name__)
 
@@ -10,9 +9,11 @@ def index():
     lastname = request.form.get('last_name')
     number = request.form.get('number')
     email = request.form.get('email')
-    password = str(request.form.get('password'))
-    re_password = str(request.form.get('confirm_password'))
-    hashed_password = hashlib.sha256(password.encode()).hexdigest()
+    password = str(request.form.get('UserPassword'))
+    re_password = request.form.get('confirm_password')
+    print('password is',password)
+    if password != re_password:
+        print("password dosen't match")
     
     conn = sqlite3.connect('signUp.db')
     cursor = conn.cursor()
@@ -24,7 +25,8 @@ def index():
             firstname TEXT,
             lastname TEXT,
             number TEXT,
-            email TEXT
+            email TEXT,
+            password TEXT
         )
     ''')
 
@@ -37,19 +39,19 @@ def index():
     print(table_info)  # Print the table schema info
 
     # Check if 'hashed_password' column exists in the table schema
-    column_exists = any(column[1] == 'hashed_password' for column in table_info)
+    #column_exists = any(column[1] == 'hashed_password' for column in table_info)
 
-    # If 'hashed_password' column not present, alter the table to add it
-    if not column_exists:
-        cursor.execute('ALTER TABLE signUp_table ADD COLUMN hashed_password TEXT')
-        conn.commit()
-        print("Column 'hashed_password' added to the table")
+    ## If 'hashed_password' column not present, alter the table to add it
+    #if not column_exists:
+    #    cursor.execute('ALTER TABLE signUp_table ADD COLUMN hashed_password TEXT')
+    #    conn.commit()
+    #    print("Column 'hashed_password' added to the table")
 
     # Insert data into the table
     cursor.execute('''
         INSERT INTO signUp_table (firstname, lastname, number, email, hashed_password) 
         VALUES (?, ?, ?, ?, ?)
-    ''', (firstname, lastname, number, email, hashed_password))
+    ''', (firstname, lastname, number, email, password))
     conn.commit()
     
     # Fetch and display data
