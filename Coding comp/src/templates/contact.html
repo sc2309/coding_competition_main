@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>About Jacked Roar</title>
+</head>
+<body>
+    <header>
+        <a href="#home" class="logo"><i class="fa-solid fa-dumbbell"></i> JackedRoar</a>
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <a href="/"><b>Home</b></a>
+            <a href="/sports"><b>Sports</b></a>
+            <a href="/diet"><b>Daily Diet</b></a>
+            <a href="/fitness"><b>Exercise</b></a>
+            <a href="/routine"><b>Routine</b></a>
+            <a href="/about"><b>About</b></a>
+            <a href="/contact"><b>Contact</b></a>
+            <a href="/feedback"><b>Feedback</b></a>
+            
+            <!-- <a href="/signup" class="btn">Signup</a>  -->
+            <!-- <a href="/login" class="btn">Login</a>  -->
+            </nav>
+    </header>
+
+    <section class="contact">
+        <h1 class="heading">Contact Us</h1>
+        <p style="font-size: 19px;">If you have any questions or inquiries, please feel free to contact us using the form below or through our contact information.</p>
+        <div class="contact-form">
+            <form action="submit_form.php" method="post">
+                <label style="font-size: 19px;" for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label style="font-size: 19px;" for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label style="font-size: 19px;" for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="contact-info">
+        <h2 class="heading">Contact Information</h2>
+        <p style="font-size: 29px; text-align: center;">Feel free to reach out to us through the following contact methods:</p>
+        <ul>
+            <li style="font-size: 19px; margin-top: 15px;"><strong>Email:</strong> info@jackedroar.com</li>
+            <li style="font-size: 19px; margin-top: 15px;"><strong>Phone:</strong> (123) 456-7890</li>
+            <li style="font-size: 19px; margin-top: 15px;"><strong>Address:</strong> 123 Fitness Street, City, Country</li>
+        </ul>
+    </section>
+    <section class="footer">
+
+        <div class="share">
+            <a href="https://www.facebook.com/" class="btn">facebook</a>
+            <a href="https://www.twitter.com/" class="btn">twitter</a>
+            <a href="https://www.instagram.com/" class="btn">instagram</a>
+            <!-- <a href="https://www.facebook.com/" class="btn">pinterest</a> -->
+            <a href="https://www.linur <span>kedin.com/" class="btn">linkedin</a>
+        </div>
+    
+        <h1 class="credit"> &copy;2023  <span> JackedRoar </span> | all rights reserved! </h1>
+    
+    </section>
+    <style>
+        /* styles.css */
+
+
+.contact {
+    padding: 20px;
+    text-align: center;
+}
+
+.contact h1 {
+    color: #333;
+}
+
+.contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+
+
+.contact-info {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-info h2 {
+    color: #333;
+}
+
+
+    </style>
+
+   </body>
+   </html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Diet</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/style.css">
+        <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+    </head>
+    <body>
+        <section class="order" id="order">
+        <!-- <h1 class="heading">Benefits of <span> Health Care</span> through Sports & Fitness</h1> -->
+            
+            <h1 class="heading"> Here is your <span>Daily Diet</span></h1>
+        
+            <div class="row">
+        
+                <ul style="font-size: 25px;">
+                    {% for item in diet_items %}
+                        <li>{{ loop.index }}. {{ item }}</li>
+                    {% endfor %}
+                </ul>
+        
+            </div>
+        
+        </section>
+        
+    </body>
+</html>

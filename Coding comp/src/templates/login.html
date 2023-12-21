@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/style.css">
+        <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+    </head>
+    <body>
+        <!-- <header> -->
+            <!-- <a href="#home" class="logo"><i class="fa-solid fa-dumbbell"></i> JackedRoar</a> -->
+            <!-- <div id="menu-bar" class="fas fa-bars"></div> -->
+            <!-- <nav class="navbar"> -->
+                <!-- <a href="/"><b>Home</b></a> -->
+                <!-- <a href="/sports"><b>Sports</b></a> -->
+                <!-- <a href="/diet"><b>Daily Diet</b></a> -->
+                <!-- <a href="/fitness"><b>Exercise</b></a> -->
+                <!-- <a href="/routine"><b>Routine</b></a> -->
+                <!-- <a href="/about"><b>About</b></a> -->
+                <!-- <a href="/contact"><b>Contact</b></a> -->
+                <!-- <a href="/feedback"><b>feedback</b></a> -->
+<!--                  -->
+                <a href="/signup" class="btn">Signup</a> 
+                <a href="/login" class="btn">Login</a> 
+                <!--  <div class="search"> -->
+                    <!-- <form action="#Recommended"> -->
+<!--                          -->
+                        <!-- <input type="text" -->
+                            <!-- placeholder=" Search for an Exercise" -->
+                            <!-- name="search"> -->
+                        <!-- <button> -->
+                            <!-- <i class="fa fa-search" -->
+                                <!-- style="font-size: 18px;"> -->
+                            <!-- </i> -->
+                        <!-- </button> -->
+                    <!-- </form> -->
+                <!-- </div> --> -->
+            <!-- </nav> -->
+<!--              -->
+        <!-- </header> -->
+            
+        <section class="order" id="order">
+        <!-- <h1 class="heading">Benefits of <span> Health Care</span> through Sports & Fitness</h1> -->
+            
+            <!-- <h1 class="heading"> <span>Order</span> Your Food Now</h1> -->
+        
+            <div class="row">
+        
+                <div class="image">
+                <h2 class="heading"><span> Login</span> Page</h2>
+                </div>
+        
+                <form action="/login2"  method="POST">
+
+                    <div class="inputBox inputBox1">
+                        <input type="email" placeholder=" Enter Your E-mail Address" name="email">  
+                        <input type="text" placeholder="Enter Your Password" name="pass">
+                    </div>
+        
+                    <div class="inputBox">
+                        <!-- <input type="number" placeholder="Number"> -->
+                        <!-- <input type="text" placeholder="Food Name"> -->
+                    </div>
+        
+                    <!-- <textarea placeholder="Address" name="" id="" cols="30" rows="10"></textarea> -->
+        
+                    <input type="submit" value="Submit" class="btn" style="margin-left: 580px;">
+                    <p style="margin-left: 550px; margin-top: 10px;">Not ragisterd yet? <a href="/signup">Signup</a></p>
+        
+                </form>
+        
+            </div>
+        
+        </section>
+        
+    </body>
+</html>

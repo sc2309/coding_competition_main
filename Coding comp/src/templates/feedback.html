@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Feedback | JackedRoar</title>
+</head>
+<body>
+    <header>
+        <a href="#home" class="logo"><i class="fa-solid fa-dumbbell"></i> JackedRoar</a>
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <a href="/"><b>Home</b></a>
+            <a href="/sports"><b>Sports</b></a>
+            <a href="/diet"><b>Daily Diet</b></a>
+            <a href="/fitness"><b>Exercise</b></a>
+            <a href="/routine"><b>Routine</b></a>
+            <a href="/about"><b>About</b></a>
+            <a href="/contact"><b>Contact</b></a>
+            <a href="/feedback"><b>feedback</b></a>
+            <!-- <a href="./signup.html" class="btn">Signup</a>  -->
+            <!-- <a href="./login.html" class="btn">Login</a>  -->
+        </nav>
+    </header>
+    <h1 class="heading" style="margin-top: 80px;">Provide your <span> feedback</span> here</h1>
+    <form action="/store_data" method="post" style="margin-left: 400px; margin-top: 80px;">
+        <input type="text" id="feed" name="feedback" required >
+    </form>
+    <button type="submit" class="btn" style="margin-top: 10px; margin-left: 680px;">Submit</button>
+
+    </body>
+    </html>

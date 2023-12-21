@@ -1,0 +1,85 @@
+<section class="Popular" id="Popular">
+            <h1 class="heading">Most Important <span> Fitness Exercises</span> In JackedRoar</h1>
+
+            <div class="box-container">
+                        <div class="box">
+                            <!-- <span class="price">200 Rs</span> -->
+                            <a href="/fitness" class="btn"><img src="https://www.realsimple.com/thmb/-PW_i-RMLQ4cj3-okjqccGGUock=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/health-benefits-of-pushups-GettyImages-498315681-7008d40842444270868c88b516496884.jpg"
+                                alt=""></a>
+                            <h2>Push-up</h3>
+                                <p>Push-up: A bodyweight exercise that works the chest, triceps, shoulders, and core.</p>
+                            
+                                <a href="/fitness" class="btn">Explore Now</a>
+                        </div>
+                        <div class="box">
+                            <!-- <span class="price">150 Rs</span> -->
+                            <a href="/fitness" class="btn"><img
+                                src="https://hips.hearstapps.com/hmg-prod/images/mh0418-fit-pul-01-1558551798.jpg?crop=0.749xw:1.00xh;0.251xw,0&resize=1200:*"></a>
+                            <h2>Pull-up</h3>
+                            
+                            <p>
+                                Pull up: A compound exercise that works the back, biceps, and core.</p>
+                                <a href="/fitness" class="btn">Explore Now</a>
+                        </div>
+                        <div class="box">
+                            <!-- <span class="price">110 Rs</span> -->
+                            <a href="/fitness" class="btn"><img src="https://media.self.com/photos/5b3a2e130d3bd2286974667a/master/pass/woman-doing-lunges.jpg" alt=""></a>
+                            <h2>Lunges</h3>
+                                <p>
+                                    Lunges: A compound exercise that works the quadriceps, hamstrings, glutes, and calves.</p>
+                                
+                                <a href="/fitness" class="btn">Explore Now</a>
+                        </div>
+                        <div class="box">
+                            <!-- <span class="price">100 Rs</span> -->
+                            <a href="/fitness" class="btn"><img src="https://kustomkitgymequipment.com/wp-content/uploads/2023/05/7-Significant-Benefits-Of-Hindu-Squats-To-Promote-Better-Leg-Growth-1.webp" alt=""></a>
+                            <h2> Squats</h3>
+                                <p>
+                                    Squats: A single move that works your entire lower body.</p>
+                                
+                                <a href="/fitness" class="btn">Explore Now</a>
+                        </div>
+                        <div class="box">
+
+                            <!-- <span class="price">230 Rs</span> -->
+                            <a href="/fitness" class="btn"><img src="https://www.muscleandfitness.com/wp-content/uploads/2019/02/man-bench-press.jpg?quality=86&strip=all"
+                                alt=""></a>
+                            <h2> Bench Press</h3>
+                            
+                                <p>
+                                    Bench press: Push weight up from chest while lying on a bench.</p>
+                                <a href="/fitness" class="btn">Explore Now</a>
+                        </div>
+                        <div class="box">
+                            <!-- <span class="price">70 Rs</span> -->
+                            <a href="/fitness" class="btn"><img src="https://hips.hearstapps.com/menshealth-uk/main/thumbs/38606/biceps.jpg"
+                                alt=""></a>
+                            <h2> Dumbbell bench press</h3>
+                            
+                                <p>
+                                    Dumbbell bench press: A compound exercise that targets the chest, triceps, and shoulders.</p>
+                                
+                                <a href="/fitness" class="btn">Explore Now</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+                <div class="box">
+                    <img src="https://media.self.com/photos/5be48273da8bb436f66d7ec2/master/w_1920%2Cc_limit/plank-lower-back-pain.jpg"
+                        alt="">
+                    <h2>Forearm Plank</h2>
+                    <p>A forearm plank is a static core exercise that engages the entire body to hold a straight line from head to heels.</p>
+
+                    <a href="/fitness" class="btn">Explore Now</a>
+                </div>
+                <div class="box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiFA_6S4WZEDdsnzrVPKQDoYb5vLD3CtJXGA&usqp=CAU">
+                    <h2>Dimond push ups</h2>
+                    <p>
+                        Diamond push-up: A push-up variation with hands placed in a diamond shape, targeting the triceps more than the chest.</p>
+
+                    <a href="/fitness" class="btn">Explore Now</a>
+                </div>
+            </div>
+        </section>
