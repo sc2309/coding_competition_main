@@ -18,7 +18,7 @@
         .fab.fa-instagram,
         .fab.fa-pinterest,
         .fab.fa-linkedin {
-            font-size: 30px; /* Adjust size as needed */
+            font-size: 20px; /* Adjust size as needed */
             /* Add more styles as required */
         }
         .changeFont {
@@ -30,59 +30,12 @@
         }
         .logo img { 
             margin: -15px;
-            background-color: rgb(223, 221, 221); 
-            width: 120px;
-            height: 70;
-            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+            /* background-color: rgb(255, 255, 255);  */
+            width: 110px;
+            height: 60;
+            /*box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);*/
         }
     </style>
-    <script>
-        const carouselContainer = document.querySelector('.carousel-container');
-        const prevBtn = document.querySelector('.prev-btn');
-        const nextBtn = document.querySelector('.next-btn');
-        let slideIndex = 0;
-        let slideInterval; // Define slideInterval
-
-        function showSlides() {
-            const slides = document.querySelectorAll('.carousel-slide');
-            if (slideIndex >= slides.length) {
-                slideIndex = 0;
-            } else if (slideIndex < 0) {
-                slideIndex = slides.length - 1;
-            }
-            carouselContainer.style.transform = `translateX(${-slideIndex * 100}%)`;
-        }
-
-        prevBtn.addEventListener('click', () => {
-            slideIndex--;
-            showSlides();
-        });
-
-        nextBtn.addEventListener('click', () => {
-            slideIndex++;
-            showSlides();
-        });
-
-        // Automatically advance slides every 3 seconds
-        slideInterval = setInterval(() => {
-            slideIndex++;
-            showSlides();
-        }, 3000);
-
-        // Optional: Pause on hover
-        carouselContainer.addEventListener('mouseenter', () => {
-            clearInterval(slideInterval);
-        });
-
-        carouselContainer.addEventListener('mouseleave', () => {
-            slideInterval = setInterval(() => {
-                slideIndex++;
-                showSlides();
-            }, 3000);
-        })
-
-    </script>
-
 </head>
 
 <body onload="myfunc()">
@@ -128,15 +81,12 @@
             <div class="content">
                 <h2>Welcome To<span> JackedRoar</span></h2>
                 <p>Welcome to JackedRoar, your ultimate destination for all things sports and fitness! Our website is your one-stop hub for expert guidance, workout routines, nutrition tips, and the latest updates in the world of sports and fitness. </p>
-                <a href="#" class="btn">Explore Now</a>
+                <a href="#" class="main_button">Explore Now</a>
                 <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
-
             </div>  
-
         </section>
-
         <section>
-            <h1 class="heading">Benefits of <span> Health Care</span> through Sports & Fitness</h1>
+            <h1 class="heading">Some Benefits of <span> Health Care</span> through Sports & Fitness</h1>
             <p class="diet-p">Healthcare plays a crucial role in supporting individuals in their pursuit of sports and fitness goals. Here are some key benefits:
                 <br>
                 <ol class="ol-1">
@@ -146,16 +96,6 @@
                 <li>Preventive Care: Regular check-ups and screenings help athletes and fitness enthusiasts detect underlying health issues, allowing for early intervention and prevention of more serious conditions.</li>
                 
                     <li>Rehabilitation: Healthcare professionals, such as physiotherapists, assist in designing personalized rehabilitation programs, helping athletes regain their strength and mobility after injuries.</li>
-                
-                        <li> Nutrition Guidance: Healthcare providers offer expert dietary advice, optimizing athletes' nutritional intake for improved performance and recovery.</li>
-                
-                            <li> Performance Enhancement: Sports medicine specialists and physical therapists can help athletes fine-tune their techniques and physical conditioning to reach their peak performance.</li>
-                
-                                <li>Mental Health Support: Healthcare services encompass mental health support, addressing the psychological aspects of sports and fitness, including stress management and performance anxiety.</li>
-                
-                                    <li>Recovery and Rest: Proper healthcare guidance includes recommendations for rest and recovery, ensuring athletes maintain a balance between training and relaxation.</li>
-                
-                                        <li>Longevity and Well-being: Access to healthcare ensures that athletes can sustain their passion for sports and fitness throughout their lives, leading to improved overall well-being and quality of life.</p>
             </ol>
             <!-- <a href="#" class="btn diet-btn">Explore Now</a> -->
         </section>
@@ -268,7 +208,6 @@
                 </div>
             </div>
         </section>
-
         <section class="Popular" id="Popular">
             <h1 class="heading">Most Important <span> Fitness Exercises</span> In JackedRoar</h1>
 
@@ -334,7 +273,7 @@
                 </div>
                 <div class="box">
                     <!-- <span class="price">50 Rs</span> -->
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiFA_6S4WZEDdsnzrVPKQDoYb5vLD3CtJXGA&usqp=CAU">
+                    <img src="../static/DPUs.jpg">
                     <h2>Dimond push ups</h2>
                     
                     <a href="/fitness" class="btn">Explore Now</a>
@@ -352,13 +291,13 @@
         <section>
             <h1 class="heading">Details of Most Important <span> Daily Diet</span> In JackedRoar</h1>
             <p class="diet-p">
-                The most important daily diet is one that is balanced and provides your body with all the nutrients it needs to function properly and stay healthy. This includes a variety of fruits, vegetables, whole grains, lean protein, and healthy fats.</p>
-            <a href="/diet" class="btn diet-btn">Explore Now</a>
+                The most important daily diet is one that is balanced and provides your body with all the nutrients. Our website provides you with all types of diet.</p>
+            <a href="/diet" class="btn diet-btn center">Explore Now</a>
         </section>
         <section>
             <h1 class="heading">Details of Most Important <span> Daily Routine</span> In JackedRoar</h1>
-            <p class="diet-p">The most important daily routine is one that helps you achieve your goals and live a healthy and fulfilling life. It should be tailored to your individual needs and preferences, but there are some general principles that can be applied.The most important daily routine is one that helps you achieve your goals and live a healthy and fulfilling life. It should be tailored to your individual needs and preferences, but there are some general principles that can be applied.</p>
-            <a href="#" class="btn diet-btn">Explore Now</a>
+            <p class="diet-p">The most important daily routine is one that helps you achieve your goals and live a healthy and fulfilling life. We provide you with a routine of school boy.</p>
+            <a href="/routine" class="btn diet-btn center">Explore Now</a>
         </section>
         <h2 class="heading">Here is your <span>Challenge</span> for the day</h2>
         <p class="diet-p"><br>{{ next_challenge }}<br></p>
